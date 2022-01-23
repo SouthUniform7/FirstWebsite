@@ -36,9 +36,7 @@ app.get('/', (req, res) => {
 			<p>These images of Lego Ghost Obi Wan Kenobi, Anakin, and Yoda have been viewed ${newCount} times. </p>
 			
 			
-			<img src="https://www.dropbox.com/s/wb8yh5kmi2cjn9u/Ben.jpg?dl=1" width="358px" height="560px"/>
-			<img src="https://www.dropbox.com/s/uzhnsvyeq6ehsy9/Anakin.jpg?dl=1" alt="Anakin Skywalker" width="546px" height="689px"/>
-			<img src="https://www.dropbox.com/s/twcokhbg4wk9yb8/Yoda.jpg?dl=1" alt="Yoda" width="462px" height="588px"/>
+			<img src="https://scontent-lga3-2.xx.fbcdn.net/v/t31.18172-8/12710860_962082760545114_5771724420675882439_o.jpg?_nc_cat=107&ccb=1-5&_nc_sid=e3f864&_nc_ohc=rVjUaYBA8GsAX-P3V6b&_nc_ht=scontent-lga3-2.xx&oh=00_AT8F4UjkUUYCIEGXxhI9iVnXxvGC-DHWtvZCoV6rcuaV4w&oe=62135859"/>
 		</body>
 		</html>
 
