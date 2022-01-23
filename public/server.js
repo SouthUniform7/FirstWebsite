@@ -5,8 +5,7 @@ const app = express();
 
 var path = require('path');
 
-app.use(express.static('public'));
-app.use('/public/images', express.static('images'));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (req, res) => {
 	const count = readFileSync('./count.txt', 'utf-8');
@@ -23,11 +22,11 @@ app.get('/', (req, res) => {
 		<head>
 			<title>Bruh.</title>
 			<style>
-   				 body {
-				        width: 50em;
-				        margin: 0 auto;
-				        font-family: Tahoma, Verdana, Arial, sans-serif;
-				    }
+					body {
+						width: 50em;
+						margin: 0 auto;
+						font-family: Tahoma, Verdana, Arial, sans-serif;
+					}
 			</style>
 		</head>
 		<body>
@@ -37,9 +36,9 @@ app.get('/', (req, res) => {
 			<p>These images of Lego Ghost Obi Wan Kenobi, Anakin, and Yoda have been viewed ${newCount} times. </p>
 			
 			
-			<img src="/public/images/Ben.jpg" alt="Ben Kenobi" width="358px" height="560px"/>
-			<img src="/public/images/Anakin.jpg" alt="Anakin Skywalker" width="546px" height="689px"/>
-			<img src="/public/images/Yoda.jpg" alt="Yoda" width="462px" height="588px"/>
+			<img src="https://www.dropbox.com/s/wb8yh5kmi2cjn9u/Ben.jpg?dl=1" width="358px" height="560px"/>
+			<img src="https://www.dropbox.com/s/uzhnsvyeq6ehsy9/Anakin.jpg?dl=1" alt="Anakin Skywalker" width="546px" height="689px"/>
+			<img src="https://www.dropbox.com/s/twcokhbg4wk9yb8/Yoda.jpg?dl=1" alt="Yoda" width="462px" height="588px"/>
 		</body>
 		</html>
 
