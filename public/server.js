@@ -3,7 +3,10 @@ const { readFileSync, writeFileSync } = require('fs');
 const express = require('express');
 const app = express();
 
-app.use(express.static(__dirname+'/public'));
+var path = require('path');
+
+app.use(express.static('public'));
+app.use('/public/images', express.static('images'));
 
 app.get('/', (req, res) => {
 	const count = readFileSync('./count.txt', 'utf-8');
@@ -21,7 +24,7 @@ app.get('/', (req, res) => {
 			<title>Bruh.</title>
 			<style>
    				 body {
-				        width: 35em;
+				        width: 50em;
 				        margin: 0 auto;
 				        font-family: Tahoma, Verdana, Arial, sans-serif;
 				    }
@@ -30,10 +33,13 @@ app.get('/', (req, res) => {
 		<body>
 			<h1>I run this off a raspberry pi.</h1>
 			
-			<p>Hello world. Its a raspberry pi, what do you want. It's two lines of text, a view counter, and a png take it or leave it.</p>
+			<p>Its a raspberry pi, what do you want. It's two lines of text, a view counter, and a png take it or leave it.</p>
 			<p>This image of Lego Ghost Obi Wan Kenobi has been viewed ${newCount} times. </p>
 			
-			<img src="https://static.wikia.nocookie.net/legogames/images/2/24/Ben_Kenobi_%28Ghost%29_image.png" width="207px" height="315px"/>
+			
+			<img src="/public/images/Ben.jpg" alt="Ben Kenobi" width="358px" height="560px"/>
+			<img src="/public/images/Anakin.jpg" alt="Anakin Skywalker" width="546px" height="689px"/>
+			<img src="/public/images/Yoda.jpg" alt="Yoda" width="462px" height="588px"/>
 		</body>
 		</html>
 
