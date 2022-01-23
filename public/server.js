@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 			<h1>I run this off a raspberry pi.</h1>
 			
 			<p>Its a raspberry pi, what do you want. It's two lines of text, a view counter, and a png take it or leave it.</p>
-			<p>This image of Lego Ghost Obi Wan Kenobi has been viewed ${newCount} times. </p>
+			<p>These images of Lego Ghost Obi Wan Kenobi, Anakin, and Yoda have been viewed ${newCount} times. </p>
 			
 			
 			<img src="/public/images/Ben.jpg" alt="Ben Kenobi" width="358px" height="560px"/>
